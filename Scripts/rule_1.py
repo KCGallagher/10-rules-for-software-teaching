@@ -5,7 +5,7 @@ import numpy as np
 
 plt.xkcd()
  
-fig = plt.figure(figsize=(4, 2.5))
+fig = plt.figure(figsize=(6, 4))
 ax = fig.add_subplot(1, 1, 1)
  
 x = np.linspace(0, 1.2, 100)
@@ -16,9 +16,9 @@ ax.set_xticks([])
 ax.set_yticks([])
  
 ax.plot(x, y1, label='Sustainable', ls='-', color='green')
-ax.plot(x, y2, label='Quick', ls=':', color='red')
+ax.plot(x, y2, label='Quick', ls='--', color='red')
  
-ax.legend()
-ax.set_xlabel('Effort')
+ax.legend(title='Coding Style', loc='upper left')
+ax.set_xlabel('Time Spent')
 ax.set_ylabel('Results')
-plt.savefig('Figures/rule_1_sustainable_vs_quick.png', dpi=300, bbox_inches='tight')
+plt.savefig('Figures/rule_1_sustainable_vs_quick.png', dpi=600, bbox_inches='tight')
